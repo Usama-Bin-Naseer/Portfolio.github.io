@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content=">IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <title>Usama's Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            color: black;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 50px;
+            background-color: rgb(59, 72, 255);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            overflow: hidden;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+            cursor: pointer;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            color: black;
+            font-size: 1rem;
+        }
+
+        .left {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+            height: 700px;
+        }
+
+        .firstsection>div {
+            width: 40%;
+        }
+
+        .leftsection {
+            font-size: 2rem;
+            font-weight: 500;
+            margin: 60px 0;
+        }
+
+        .rightsection img {
+            width: 90%;
+            height: 50%;
+        }
+
+        .blue {
+            color: rgb(59, 72, 255);
+        }
+
+        #element {
+            color: rgb(59, 72, 255);
+        }
+
+        .services {
+            margin: 50px 0;
+            height: 400px;
+        }
+
+        .About {
+            margin: 50px 50px;
+            height: 330px;
+            width: 75%;
+            padding-left: 130px;
+            padding-bottom: 130px;
+        }
+
+        .Contact {
+            margin: 50px 50px;
+            height: 280px;
+            width: 75%;
+            padding-left: 130px;
+            padding-bottom: 130px;
+        }
+
+        .services-heading {
+            height: 20px;
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2rem;
+            color: rgb(0, 0, 0);
+        }
+
+        .About-heading {
+            height: 20px;
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2rem;
+            padding-bottom: 20px;
+            color: rgb(12, 12, 12);
+        }
+
+        .Contact-heading {
+            height: 20px;
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2rem;
+            padding-bottom: 20px;
+            color: rgb(0, 0, 0);
+        }
+
+        .services-line {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.4rem;
+            color: rgb(0, 0, 0);
+        }
+
+        .services-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .services-box {
+            width: 30%;
+            height: 200px;
+            background-color: rgb(203, 207, 255);
+            border-radius: 10px;
+            padding: 20px 10px;
+            box-shadow: 10px 10px 20px rgb(0, 0, 2);
+        }
+
+        .services-box:hover {
+            border-radius: 20px;
+            padding: 30px 20px;
+            box-shadow: 10px 10px 20px rgb(1, 1, 247);
+        }
+
+        .About-Box {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(203, 207, 255);
+            border-radius: 10px;
+            padding: 20px 10px;
+            box-shadow: 10px 10px 20px rgb(0, 0, 2);
+        }
+
+        .About-Box:hover {
+            border-radius: 20px;
+            padding: 30px 20px;
+            box-shadow: 10px 10px 20px rgb(1, 1, 247);
+        }
+
+        .Contact-Box {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(203, 207, 255);
+            border-radius: 10px;
+            padding: 20px 10px;
+            box-shadow: 10px 10px 20px rgb(0, 0, 2);
+        }
+
+        .Contact-Box:hover {
+            border-radius: 20px;
+            padding: 30px 20px;
+            box-shadow: 10px 10px 20px rgb(1, 1, 247);
+        }
+
+        .services-title {
+            text-align: center;
+            font-size: 1.5rem;
+            color: rgb(0, 17, 255);
+        }
+
+        .services-desc {
+            text-align: center;
+            font-size: 1.1rem;
+            color: rgb(0, 0, 0);
+            padding-top: 10px;
+        }
+
+        .services-desc:hover {
+            font-size: 1.2rem;
+            color: rgb(0, 38, 255);
+        }
+
+        .About-desc {
+            text-align: justify;
+            font-size: 1.1rem;
+            color: rgb(0, 0, 0);
+            padding-top: 10px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .image {
+            width: 3%;
+            height: 3%;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .Platform {
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+
+        .details {
+            padding-left: 30px;
+            color: #2f00ff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Usama's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#section1">Services</a></li>
+                    <li><a href="#section2">About</a></li>
+                    <li><a href="#section3">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstsection" id="home">
+            <div class="leftsection">
+                Hi, My Name is <span class="blue">Usama</span>
+                <div>
+                    And I am a Passionate
+                </div>
+                <div>
+                    <span id="element"></span>
+                </div>
+            </div>
+            <div class="rightsection">
+                <image src="1.png" alt="">
+            </div>
+        </section>
+    </main>
+    <hr>
+    <section class="services" id="section1">
+        <div class="services-heading">
+            <h1><u>Services</u></h1>
+        </div>
+        <div class="services-line">
+            <p>Here are some of my services</p>
+        </div>
+        <div class="services-container">
+            <div class="services-box">
+                <div class="services-title">
+                    <h2>Web Development</h2>
+                </div>
+                <div class="services-desc">
+                    <p>-> I can develop a responsive website.</p>
+                </div>
+                <div class="services-desc">
+                    <p>-> I can develop an E-Comerce website.</p>
+                </div>
+                <div class="services-desc">
+                    <p>-> I also provide website maintenance services.</p>
+                </div>
+
+            </div>
+            <div class="services-box">
+                <div class="services-title">
+                    <h2>Web Development</h2>
+                </div>
+                <div class="services-desc">
+                    <p>I can develop a responsive website for you.</p>
+                </div>
+            </div>
+            <div class="services-box">
+                <div class="services-title">
+                    <h2>Web Development</h2>
+                </div>
+                <div class="services-desc">
+                    <p>I can develop a responsive website for you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section class="About" id="section2">
+        <div class="About-heading">
+            <h1><U>About Me</U></h1>
+        </div>
+        <div class="About-Box">
+            <div class="About-desc">
+                I am Usama Bin Naseer, a software engineering enthusiast from Lahore, Pakistan. I love creating amazing
+                things with technology and solving problems along the way. I am skilled in web development, C/C++
+                programming, and has a talent for finding solutions to complex
+                challenges. I know how to build impressive websites and user-friendly web applications using modern
+                tools like HTML,
+                CSS,JavaScript, React, and Angular. I am also experienced in system-level programming using C/C++, which
+                means I can work on all sorts of exciting projects.
+            </div>
+            <div class="About-desc">
+                My passion for learning keeps me up to date with the latest trends and technologies in the software
+                engineering field. I enjoys being part of software engineering communities, where I can collaborate with
+                others who share
+                my love for technology. With me on your side, you can expect outstanding work and innovative solutions
+                in the fast-paced world
+                of software engineering. Get ready for a journey filled with creativity, problem-solving, and remarkable
+                achievements.
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section class="Contact" id="section3">
+        <div class="Contact-heading">
+            <h1><U>Contact Me</U></h1>
+        </div>
+        <div class="Contact-Box">
+            <div class="Platform">
+                <a href="https://mail.google.com/mail/u/0/#inbox">
+                    <image class="image" src="mail.png" alt=""></image>
+                </a>
+                E-Mail:
+                <u class="details">usama1905315@gmail.com</u>
+            </div>
+            <div class="Platform">
+                <a href="https://www.facebook.com/usamasandhu15">
+                    <image class="image" src="FB.png" alt=""></image>
+                </a>Facebook:
+                <u class="details">https://www.facebook.com/usamasandhu15</u>
+            </div>
+            <div class="Platform">
+                <a href="https://www.instagram.com/usama__sandhu_/">
+                    <image class="image" src="insta.png" alt=""></image>
+                </a>
+                Instagram:
+                <u class="details">https://www.instagram.com/usama__sandhu_/</u>
+            </div>
+            <div class="Platform">
+                <a href="https://www.linkedin.com/in/usama-bin-naseer-48637b1b4/">
+                    <image class="image" src="linkdin.png" alt=""></image>
+                </a> Linkdin:
+                <u class="details">https://www.linkedin.com/in/usama-bin-naseer-48637b1b4/</u>
+            </div>
+            <div class="Platform">
+                <a href="https://wa.me/+923041417979">
+                    <image class="image" src="phone.png" alt=""></image>
+                </a>Phone:
+                <u class="details">+92 304 1417979</u>
+            </div>
+            <div class="Platform">
+                <image class="image" src="location.png" alt=""></image>
+                Location:
+                <u class="details">Lahore, Punjab, Pakistan.</u>
+            </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer,', 'C/C++ Programmer,', '&amp; a Software Engineer.'],
+            typeSpeed: 50,
+            backSpeed: 50,
+            loop: true,
+        });
+    </script>
+</body>
+
+</html>
